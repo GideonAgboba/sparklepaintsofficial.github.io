@@ -52,8 +52,9 @@
 		            		<h5 class="text-center text-white">Multi purchase:</h5>
 		            		<hr class="container">	
 		               <div class="input-field col-lg-12"> 
-		                  <input placeholder="itmes" id="items" name="items" type="text" class="validate text-white text-center"> 
-		                  <label for="items" class="text-white">Items:</label> 
+		                  <textarea placeholder="items" id="items" name="items" type="text" class="validate text-white">
+		                  </textarea> 
+		                  <label for="items" class="text-white text-center mb-1">Items and quantity:</label> 
 		               </div>
 		           </div>
 		            <div class="row"> 
@@ -69,9 +70,9 @@
 		               </div>
 		           </div>
 
-					<div class="container modal-footer">
-						<button class="btn btn-danger mr-3" data-dismiss="modal">Cancle</button>	
-						<button type="submit" name="send" class="btn green-body text-white">Checkout<span class="fa fa-shopping-cart"></span></button>
+					<div class="container modal-footer justify-content-center my-auto d-flex">
+						<button class="btn-lg btn-danger mr-3" data-dismiss="modal">Cancle</button>	
+						<button type="submit" name="send" class="btn-lg green-body text-white">Checkout<span class="fa fa-shopping-cart"></span></button>
 					</div>
 		         </form>        
 		      </div>

@@ -1,26 +1,25 @@
 
-          <div class="container home-contact-section text-center">
-            <div class="container text-center">
-        <div class="container col-lg-12 mt-5">
-          <div class="row">
-            <div class="col-lg-6 green-font">
-              <h4>About us <hr class="green-font"></h4>
-              <q>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</q>
-            </div>
-            <div class="col-lg-6">
-              <form class="form-group">
-                <div class="col-lg-12">
-                  <textarea type="text" id="report" class="form-control text-center text-success" placeholder="..." style="height: 150px;margin-bottom: 0.2em;"></textarea>
-                  <button type="submit" class="btn green-body text-white form-control">Write To Us</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
+<!-- About 
+    ================================================== -->
+<section class="about-sec parallax-section p-4" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+                    <div class="circle home-about-img">
+                        <img src="imgs/wrap.jpg" class="rounded-circle">
+                    </div>
       </div>
+      <div class="col-md-4">
+        <p>To enjoy good health, to bring true happiness to one's family, to bring peace to all, one must first discipline and control one's own mind. If a man can control his mind he can find the way to Enlightenment, and all wisdom and virtue will naturally come to him.</p>
+        <p>Saving our planet, lifting people out of poverty, advancing economic growth... these are one and the same fight. We must connect the dots between climate change, water scarcity, energy shortages, global health, food security and women's empowerment. Solutions to one problem must be solutions for all.</p>
       </div>
+      <div class="col-md-4">
+        <p>Our greatest happiness does not depend on the condition of life in which chance has placed us, but is always the result of a good conscience, good health, occupation, and freedom in all just pursuits.</p>
+        <p>Being in control of your life and having realistic expectations about your day-to-day challenges are the keys to stress management, which is perhaps the most important ingredient to living a happy, healthy and rewarding life.</p>
+        <p><a href="#" class="btn btn-transparent-white btn-capsul">Explore More</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+      
+      

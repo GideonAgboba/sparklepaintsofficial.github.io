@@ -14,20 +14,14 @@
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/carousel.css">
 
-    <!-- <link rel="icon" href="imgs/\" class="fa fa-home"> -->
+    <link rel="icon" href="imgs/icon.png">
 </head>
-<body>
+<body class="green-body text-white">
 
 
-      <a href="#"><i class="fa fa-shopping-cart brand-logo right mt-2"  href="#details-7" class="mt-2 container-fluid btn green-body white-text"  data-toggle="modal" data-target="#details-7" onclick="" style="font-size: 40px;color: #fff;position: fixed;top: 0px;right: 20px; z-index: 20000;"></i></a>
-      <?php include 'pop.php'; ?>
-
-
-  <div id="test1" class="container-fluid">
+  <div id="test1" class=" bg-white white green-font ">
       <?php include 'home-first-section.php'; ?>
       <?php include 'quick-order.php'; ?>
-
-      <?php include 'home-second-section.php'; ?>
 
       
       <?php include 'home-third-section.php'; ?>
@@ -44,7 +38,7 @@
 
 
 
-  <div id="test2" class="green-body container-fluid">
+  <div id="test2" class="green-body">
       <?php include 'lab-content.php'; ?>
   </div>
 
@@ -52,11 +46,10 @@
 
 
 
-  <div id="test3" class="green-body container-fluid ">
+  <div id="test3" class="green-body container-fluid p-4" style="zoom: 80% !important;">
     <?php include 'storenav.php'; ?>
-    <?php include 'storenav-emulsion.php'; ?>
-    <!-- <?php include 'storenav-texcote.php'; ?>
-    <?php include 'storenav-gloss.php'; ?> -->
+    <?php include 'storenav-texcote.php'; ?>
+    <?php include 'storenav-gloss.php'; ?>
   </div>
 
 
@@ -109,92 +102,8 @@
 
 
 
-  <div id="test4" class="green-body">
-    <div class="container-fluid" style="padding-top: 3em;">
-      <div class="wrap">
-<div class="tile"> 
-  <img src='imgs/int1.jpg'/>
-  <div class="text">
-  <h2 class="animate-text">Interior design <i class="fa fa-paint-brush"></i></h2>
-  <p class="animate-text">With fine quality paints as our edge in this line of business. We provide finishings looking very unique and out standing.</p>
-<div class="dots">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  </div>
- </div>
-
-
-<div class="tile"> 
-  <img src='imgs/int2.jpg'/>
-  <div class="text">
-  <h2 class="animate-text">Interior design <i class="fa fa-paint-brush"></i></h2>
-  <p class="animate-text">With fine quality paints as our edge in this line of business. We provide finishings looking very unique and out standing.</p>
-<div class="dots">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  </div>
- </div>
-  
-  <div class="tile"> 
-  <img src='imgs/int3.jpg'/>
-  <div class="text">
-  <h2 class="animate-text">Interior design <i class="fa fa-paint-brush"></i></h2>
-  <p class="animate-text">With fine quality paints as our edge in this line of business. We provide finishings looking very unique and out standing.</p>
-<div class="dots">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  </div>
- </div>
-</div>
-
-<div class="wrap">
-<div class="tile"> 
-  <img src='imgs/int1.jpg'/>
-  <div class="text">
-  <h2 class="animate-text">Interior design <i class="fa fa-paint-brush"></i></h2>
-  <p class="animate-text">With fine quality paints as our edge in this line of business. We provide finishings looking very unique and out standing.</p>
-<div class="dots">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  </div>
- </div>
-
-
-<div class="tile"> 
-  <img src='imgs/int2.jpg'/>
-  <div class="text">
-  <h2 class="animate-text">Interior design <i class="fa fa-paint-brush"></i></h2>
-  <p class="animate-text">With fine quality paints as our edge in this line of business. We provide finishings looking very unique and out standing.</p>
-<div class="dots">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  </div>
- </div>
-  
-  <div class="tile"> 
-  <img src='imgs/int3.jpg'/>
-  <div class="text">
-  <h2 class="animate-text">Interior design <i class="fa fa-paint-brush"></i></h2>
-  <p class="animate-text">With fine quality paints as our edge in this line of business. We provide finishings looking very unique and out standing.</p>
-<div class="dots">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  </div>
- </div>
-</div>
-    </div>  
+  <div id="test4" class="green-body" style="height: 100vh;">
+    <?php include 'order.php'; ?>
   </div>
 
 
@@ -209,10 +118,7 @@
 
 <?php
   include 'nav.php';
-  include 'footer.php';
 ?>
-
-</script>
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js?ver=1.11.2'></script>
     <script src="jquery/jquery.min.js"></script>
     <script src="popper/popper.min.js"></script>

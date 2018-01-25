@@ -1,5 +1,7 @@
- <div class="container-fluid gallery-section justify-content-center my-auto d-flex p-5">
-            
+<!--  
+  <h4 class="text-center green-font">Showcase <i class="fa fa-book"></i></h4>
+  <hr class="container-fluid green-font">
+  <div class="container-fluid gallery-section justify-content-center my-auto d-flex p-5">
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css'><link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 <style class="cp-pen-styles">img { max-height: 100% }
 .swiper-container {
@@ -25,21 +27,19 @@
         align-items: center;
       /*width:90%;*/ 
     }</style></head><body>
-<!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="https://placehold.it/666x666" /></div>
-            <div class="swiper-slide"><img src="https://placehold.it/666x666" /></div>
-            <div class="swiper-slide"><img src="https://placehold.it/666x666" /></div>
-            <div class="swiper-slide"><img src="https://placehold.it/666x666" /></div>
-            <div class="swiper-slide"><img src="https://placehold.it/666x666" /></div>
-            <div class="swiper-slide"><img src="https://placehold.it/666x666" /></div>
-            <div class="swiper-slide"><img src="https://placehold.it/666x666" /></div>
-            <div class="swiper-slide"><img src="https://placehold.it/666x666" /></div>
-            <div class="swiper-slide"><img src="https://placehold.it/666x666" /></div>
-            <div class="swiper-slide"><img src="https://placehold.it/666x666" /></div>
+            <div class="swiper-slide"><img src="imgs/gallery1.jpg" /></div>
+            <div class="swiper-slide"><img src="imgs/gallery2.jpg"  /></div>
+            <div class="swiper-slide"><img src="imgs/gallery3.jpg" /></div>
+            <div class="swiper-slide"><img src="imgs/gallery4.jpg"  /></div>
+            <div class="swiper-slide"><img src="imgs/gallery5.jpg" /></div>
+            <div class="swiper-slide"><img src="imgs/gallery6.jpg"  /></div>
+            <div class="swiper-slide"><img src="imgs/gallery7.jpg"  /></div>
+            <div class="swiper-slide"><img src="imgs/gallery1.jpg"  /></div>
+            <div class="swiper-slide"><img src="imgs/gallery1.jpg"  /></div>
+            <div class="swiper-slide"><img src="imgs/gallery1.jpg"  /></div>
         </div>
-        <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
     </div>
 <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js'></script>
@@ -63,7 +63,4 @@ autoplay: 2500,
     });
 
 //# sourceURL=pen.js
-</script>
-
-          
-        </div>
+</script> -->

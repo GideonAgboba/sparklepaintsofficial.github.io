@@ -1,7 +1,7 @@
 <div class="modal fade details-7" id="details-7" tabindex="-1" role="dialog" aria-labelledby="details-7" aria-hidden="false">
 
 	<div class="modal-content">
-		<div class="container-fluid">
+		<div class="">
 			<div class="modal-header">
 				<button class="close" type="button" data-dismiss="modal" aria-label="close">
 				<span aria-hidden="true">&times;</span>
@@ -10,38 +10,21 @@
 			</div>
 
 			<div class="modal-body">
-				<div class="">
-				<hr class="container">
-						<?php
-							if (!empty($_SESSION["shopping_cart"])) {
-								$total=0;
-								foreach ($_SESSION["shopping_cart"] as $keys => $values) {
-						?>
-							<ul class="bg-white jusitfy-content-center my-auto d-flex">
-								<li class="green-font nav-tiem text-center p-4" style="display: inline-block !important;"><?php echo $values["item_name"]; ?></li>
-								<li class="green-font nav-tiem text-center p-4" style="display: inline-block !important;"> <?php echo $values["item_description"]; ?></li>
-								<li class="green-font nav-tiem text-center p-4" style="display: inline-block !important;"> <?php echo $values["item_price"]; ?></li>
-								<li class="green-font nav-tiem text-center p-4" style="display: inline-block !important;"> Quantity: <?php echo $values["item_quantity"]; ?></li>
-								<li class="green-font nav-tiem text-center p-4" style="display: inline-block !important;"> <?php echo number_format($values["item_quantity"] * $values["item_price"], 2) ?></li>
-								<li class=" nav-tiem text-center p-4"><a class="btn red" href="emulsion-exterior.php?action=delete&id=<?php  echo $values["item_id"]; ?>">Delete</a></li>
-							</ul>
-							<?php
-									$total = $total + ($values["item_quantity"] * $values["item_price"]);
-								}
-							?>
-								<li style="background-color: #fff; padding: 5px; display: block !important; list-style: none; text-align: center;">Total: N<?php echo number_format($total, 2); ?></li>
-							<?php
-							}
-							?>
-							<? require 'emulsion-exterior.php'; ?>
-
-
-					<div class="container modal-footer modal-dialog ">
-						<button class="btn btn-danger mr-3" data-dismiss="modal">Cancle</button>	
-						<button type="submit" name="send" class="btn green-body text-white">Checkout<span class="fa fa-shopping-cart"></span></button>
-					</div>
-
-			</div>
+				<div class="card">
+						<form name="postform" action="checkout.php" method="POST" class="text-center m-2">
+							<input placeholder="Txnid" class="form-control validate" type="hidden" name="txnid" value="<?php echo $txnid=rand(100000000000000,9999999999999999); ?>" required />
+							<input placeholder="Amount" class="form-control validate text-center" type="number" name="amount" value="$total">
+							<input placeholder="Fullname" class="form-control validate text-center" type="text" name="name" value="" required />
+							<input placeholder="Email" class="form-control validate text-center" type="text" name="email" value="" required />
+							<input placeholder="Phone" class="form-control validate text-center" type="number" name="phone" value="" required />
+							<input placeholder="Productinfo" class="form-control validate text-center" type="text" name="Productinfo" value="" required />
+							<input placeholder="Success URL" class="form-control validate text-center" type="text" name="surl" value="https://pay.indiancybercell.in/simple/success.php" required />
+							<input placeholder="Failure URL" class="form-control validate text-center" type="text" name="furl" value="https://pay.indiancybercell.in/simple/success.php" required />
+							<input type="submit" name="" class="btn green-body right" value="submit">
+							<input type="reset" name="" class="btn orange right" value="reset">
+							<input type="submit" name="" class="btn red right" value="Cancle">
+						</form>
+				</div>
 			</div>
 			
 		</div>

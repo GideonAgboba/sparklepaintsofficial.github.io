@@ -10,7 +10,11 @@
         <li class="tab">
           <a href="#test3" class="nav-link white-text"><i class="fa fa-archive"></i> Store</a>
         </li>
-        <li class="tab"><a href="#test4" class="nav-link white-text"><i class="fa fa-book"></i> Gallary</a></li>
+        <li class="tab"><a href="#test4" class="nav-link white-text fa-2x"><i class="fa fa-shopping-cart"></i> Checkout</a></li>
       </ul>
     </div>
     </nav>
+
+
+
+    
