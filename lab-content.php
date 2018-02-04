@@ -22,23 +22,47 @@
       if (mysqli_num_rows($result) >0) {
         while ( $row = mysqli_fetch_array($result)) {
     ?>
-            <div class="col-lg-3 p-2" ontouchstart="this.classList.toggle('hover');">
-                <div class="container">
-                    <div class="front" style="background-image: url(<?php echo $row["image"];  ?>)">
-                      <img src="">
-                        <div class="inner">
-                            <p><?php echo $row["title"]; ?></p>
-                        </div>
+            <div class="container col-lg-3">  
+                <div class="container-fluid">
+                  <div class="card">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="<?php echo $row['image'] ?>">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><?php echo $row['title']; ?><i class="fa fa-bars right text-muted"></i></span>
+                    
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><i class="fa fa-close right text-muted"></i></span>
+                    <div class="col-lg-12 text-muted">
+                      <h5>Emulsion-interior</h5>
+                      <p class="">Price: <s class="text-danger">N5,000</s></p>
+                      <b>Our price: N4,200</b>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                          <i>Interior: N4,200</i>
-                          <i>Exterior: N8,500</i>
-                        </div>
+                    <div class="col-lg-12 text-muted">
+                      <h5>Emulsion-exterior</h5>
+                      <p class="">Price: <s class="text-danger">N8,999</s></p>
+                      <b>Our price: N8,500</b>
+
                     </div>
+                    <div class="col-lg-12 text-muted">
+                      <h5>Gloss</h5>
+                      <p class="">Price: <s class="text-danger">N5,000</s></p>
+                      <b>Our price: N4,500</b>
+                    </div>
+                    <hr class="container m-4">
+                    <br>
+                    <div class="col-lg-12">
+                      <form action="index.php#test3">
+                        <button type="submit" class="btn container-fluid green-body">Go to store</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
                 </div>
 
-            </div>
+                
+              </div>
     <?php
         }
       }
@@ -50,31 +74,54 @@
 
 <div id="cattexcote" class="green-body" style="border-style: none !important;padding-top: 0.8em !important;">
   <div class="col-lg-12 container-fluid green-body text-center">
-          <div class="row container-fluid col-lg-12">
+          <div class="row container-fluid col-lg-12 mt-5">
 <?php
-      $query = "SELECT * FROM glos ORDER BY id ASC";
+      $query = "SELECT * FROM gloss ORDER BY id ASC";
       $result = mysqli_query($connect, $query);
       if (mysqli_num_rows($result) >0) {
         while ( $row = mysqli_fetch_array($result)) {
     ?>
-            <div class="col-lg-3 p-2" ontouchstart="this.classList.toggle('hover');">
-                <div class="container">
-                    <div class="front" style="background-image: url(<?php echo $row["image"];  ?>)">
-                      <img src="">
-                        <div class="inner">
-                            <p><?php echo $row["title"]; ?></p>
-                        </div>
+             <div class="container col-lg-3">  
+                <div class="container-fluid">
+                  <div class="card">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="<?php echo $row['image'] ?>">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><?php echo $row['title']; ?><i class="fa fa-bars right text-muted"></i></span>
+                    
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><i class="fa fa-close right text-muted"></i></span>
+                    <div class="col-lg-12 text-muted">
+                      <h5>Emulsion-interior</h5>
+                      <p class="">Price: <s class="text-danger">N5,000</s></p>
+                      <b>Our price: N4,200</b>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                          <h2 class="text-white"><?php echo $row["description"]; ?></h2>
-                          <i>Price: <s class="text-danger">N5,200</s></i>
-                          <p>Our price: N<?php echo $row["price"]; ?></p>
-                        </div>
+                    <div class="col-lg-12 text-muted">
+                      <h5>Emulsion-exterior</h5>
+                      <p class="">Price: <s class="text-danger">N8,999</s></p>
+                      <b>Our price: N8,500</b>
+
                     </div>
+                    <div class="col-lg-12 text-muted">
+                      <h5>Gloss</h5>
+                      <p class="">Price: <s class="text-danger">N5,000</s></p>
+                      <b>Our price: N4,500</b>
+                    </div>
+                    <hr class="container m-4">
+                    <br>
+                    <div class="col-lg-12">
+                      <form action="index.php#test3">
+                        <button type="submit" class="btn container-fluid green-body">Go to store</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
                 </div>
 
-            </div>
+                
+              </div>
     <?php
         }
       }

@@ -1,4 +1,4 @@
-
+  
       <footer class="home-footer green-body col-lg-12">
         <div class="text-white text-center">
           Sparklepaints.co@2018

@@ -1,22 +1,22 @@
-
+ 
       <div class="modal fade details-6" id="details-6" tabindex="-1" role="dialog" aria-labelledby="details-6" aria-hidden="false">
 
 	<div class=" modal-content">
 		<div class="container-fluid">
 			<div class="modal-header">
 				<button class="close" type="button" data-dismiss="modal" aria-label="close">
-				<span aria-hidden="true">&times;</span>
+				<span aria-hidden="true" class=" modal-dialog">&times;</span>
 				</button>
 				<h4 class="modal-title text-center"><i class="fa fa-handshake-o"></i> Make purchase:</h4>
 			</div>
-			<div class="container modal-body">
-				<section class="reg-legend mt-4">
+			<div class="">
+				<section class=" mt-4">
       			<div class="row">
 
-      			 <form class="col-lg-12" id="contact-form" method="POST" action="https://formspree.io/agbobakehinde@gmail.com"> 
+      			 <form class="container-fluid" id="contact-form" method="POST" action="https://formspree.io/agbobakehinde@gmail.com"> 
 
 
-		            <div class="row modal-dialog"> 
+		            <div class="row"> 
 		               <div class="input-field col-lg-6">  
 		                  <input placeholder="Full name" id="firstname" name="fullname" type="text" class="text-center active validate  green-font" required> 
 		                  <label for="name">First  name</label> 
@@ -40,11 +40,11 @@
 		            		<h5 class="text-center text-white">Single purchase:</h5>
 		            		<hr class="container">	 
 		               <div class="input-field col-lg-6"> 
-		                  <input placeholder="Quantity" id="quantity" type="number" name="quantity" class="validate  text-muted text-center"> 
+		                  <input placeholder="Quantity" id="quantity" type="number" name="quantity" class="validate  text-white text-center"> 
 		                  <label for="quantity " class="text-white">Quantity:</label> 
 		               </div>  
 		               <div class="input-field col-lg-6">
-		                  <input placeholder="Item" id="item" type="text" class="validate text-center text-muted" name="item"> 
+		                  <input placeholder="Item" id="item" type="text" class="validate text-center text-white" name="item"> 
 		                  <label for="item" class="text-white">Item:</label> 
 		               </div> 
 		            </div> 
@@ -52,9 +52,8 @@
 		            		<h5 class="text-center text-white">Multi purchase:</h5>
 		            		<hr class="container">	
 		               <div class="input-field col-lg-12"> 
-		                  <textarea placeholder="items" id="items" name="items" type="text" class="validate text-white">
-		                  </textarea> 
-		                  <label for="items" class="text-white text-center mb-1">Items and quantity:</label> 
+		                  <input placeholder="Items" id="items" type="text" class="validate text-center text-white" name="item"> 
+		                  <label for="items" class="text-white">Items and quantity:</label> 
 		               </div>
 		           </div>
 		            <div class="row"> 
@@ -71,8 +70,8 @@
 		           </div>
 
 					<div class="container modal-footer justify-content-center my-auto d-flex">
-						<button class="btn-lg btn-danger mr-3" data-dismiss="modal">Cancle</button>	
-						<button type="submit" name="send" class="btn-lg green-body text-white">Checkout<span class="fa fa-shopping-cart"></span></button>
+						<button class="btn bg-danger mr-3" data-dismiss="modal">Cancle</button>	
+						<button type="submit" name="send" class="btn green-body text-white">Checkout<span class="fa fa-shopping-cart"></span></button>
 					</div>
 		         </form>        
 		      </div>
@@ -109,3 +108,10 @@
 		}
 	}
 </script>
+
+<style type="text/css">
+	label{
+		font-size: 21px !important;
+		color: #25A187 !important;
+	}
+</style>

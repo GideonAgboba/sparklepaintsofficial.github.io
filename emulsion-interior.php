@@ -4,12 +4,19 @@
 		$id = $_GET["id"];
 		$img = $_POST['hidden_image'];
 		$title = $_POST['hidden_name'];
-		$description = $_POST['hidden_description'];
+		$description = $_POST['hidden_description']; 
 		$price = $_POST['hidden_price'];
 		$quantity = $_POST['quantity'];
 
+		
+			if (isset($_COOKIE['ss'])) {
+				$table_name = $_COOKIE['ss'];
+			}else{
+				$table_name = "guest";
+			}
+
 		$create= "
-CREATE TABLE `cart` (
+CREATE TABLE `$table_name` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `price` varchar(255) NOT NULL,
@@ -26,19 +33,24 @@ CREATE TABLE `cart` (
 			mysqli_query($connect, $create);
 		//$q = "INSERT INTO ordereditems (title,description,price,) VALUES ('$title', '$description', '$price');";
 		if (!empty($_GET["id"])) {
-			$q= "INSERT INTO `cart` (`id`, `title`, `price`, `description`, `image`, `quantity`) VALUES
+			$q= "INSERT INTO `$table_name` (`id`, `title`, `price`, `description`, `image`, `quantity`) VALUES
 ($id, '$title', '$price', '$description', '$img', '$quantity');";
 		mysqli_query($connect, $q) or die(mysqli_error($connect));
 	}
 	?>
-	<div class="bg-warning text-white text-center">
+	<div class="white-text container-fluid text-center fixed-top mt-5" style="background-image: url(<?php echo $_POST['hidden_image']; ?>);">
+
 		<?php
-			$query = "SELECT * FROM cart ORDER BY id ";
+			$query = "SELECT * FROM $table_name ORDER BY id ";
 			$result = mysqli_query($connect, $query);
 			if (mysqli_num_rows($result) >0) {
 				if ( $row = mysqli_fetch_array($result)) {
 		?>
-					<div class='bg-warning text-white text-center mt-3 p-2 container'><h5>Item successfully added to cart!</h5></div>
+					<div class='text-center p-3 container'>
+						<h5>
+							<?php echo $_POST['quantity']; ?> <?php echo $_POST['hidden_name']; ?> was successfully added to cart
+						</h5 style="float: right" class="green-body green-font">
+					</div>
 		<?php
 				}
 			}
@@ -53,9 +65,10 @@ CREATE TABLE `cart` (
 <! DOCTYPE html>
 <html>
 <head>
+	
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <title>Sparkle | Home</title>
+    <title>Sparkle | Emulsion interior</title>
     <link href="sparkle-min.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/materialize.min.css">
@@ -65,24 +78,33 @@ CREATE TABLE `cart` (
   
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/carousel.css">
-
-      <nav class="navbar-expand green-body fixed-top">
-      	<a href="index.php#test3"><i class="fa fa-angle-left brand-logo left ml-3 mt-3"></i></a>
-      	<a href="#"><img src="" class="brand-logo center img-responsive" alt="Sparkle"></a>
-      	<a href="index.php#test4"><i class="fa fa-shopping-cart brand-logo right mt-3 mr-3 fa-2x" onclick=""></i></a>
+<body class="justify-content-center my-auto d-flex" style="font-family: sans-serif;">
+<script>
+	function close_window() {
+  if (confirm("Are you done shopping?")) {
+    close();
+  }
+}
+</script>
+      <nav class="navbar-expand white fixed-top">
+      	<button class="btn green-body ml-3 mt-2" onclick="close_window()">CLOSE</button>
+      	<form class="center brand-logo" method="POST" action="emulsion-interior.php">
+      	<input type="text" name="search" class="form-control validate text-center" placeholder="search item" value="<?php if(isset($_POST['search'])){ echo $_POST['search'];} ?>">
+      	</form>
+      	<a href="index.php#test4" class="btn green-body right mt-2 mr-3 ">View cart</a>
       </nav>
 			
       <!-- <a href="#"><i class="fa fa-shopping-cart brand-logo right mt-2"  href="#details-7" class="mt-2 container-fluid btn green-body white-text"  data-toggle="modal" data-target="#details-7" onclick="" style="font-size: 40px;color: #fff;position: fixed;top: 0px;right: 20px; z-index: 20000;"></i></a> -->
       <?php include 'pop.php'; ?>
-	<div class="container-fluid green-body green-font row p-4">
+	<div class="container-fluid green-body green-font row p-4>
+			<div class="text-center row " style="margin: 0 auto; float: none; text-align: center;">
 		<?php
 			$query = "SELECT * FROM emulsion_interior ORDER BY id ASC";
 			$result = mysqli_query($connect, $query);
 			if (mysqli_num_rows($result) >0) {
 				while ( $row = mysqli_fetch_array($result)) {
 		?>
-			<div class="text-center " style="margin: 0 auto; float: none; text-align: center;">
-				<div class="text-center bg-white p-5 mb-3">
+				<div class="text-center col-lg-3 bg-white p-5 mb-3" style="border: 5px solid #25A187; border-radius: 10px;">
 					<form method="POST" action="emulsion-interior.php?action=add&id=<?php echo $row["id"]; ?>">
 					<img src="<?php  echo $row['image']; ?>" style="width: 200px;height: 200px;">
 					<h4><?php  echo $row["title"]; ?></h4>
@@ -97,11 +119,11 @@ CREATE TABLE `cart` (
 					<input type="submit" name="add_to_cart" class="btn green-body container-fluid mb-3" value="Add to cart" />
 				</form>
 				</div>
-			</div>
 		<?php
 				}
 			}
 		?>
+			</div>
 	</div>
 
 
@@ -119,4 +141,3 @@ CREATE TABLE `cart` (
       <script type="text/javascript" src="js/init.js"></script>
 </body>
 </html>
-

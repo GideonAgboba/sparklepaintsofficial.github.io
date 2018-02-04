@@ -1,6 +1,564 @@
+
+    <style type="text/css">
+      @media screen and (min-width: 1024px) {
+        .nav-img-mobile{
+          display: none !important;
+        }
+        .login-mobile{
+          display: none !important;
+        }
+      }
+       @media screen and (max-width: 1024px) {
+        .nav-img-mobile{
+          display: inline !important;
+        }
+        .login-mobile{
+          display: inline !important;
+        }
+      }
+    </style>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'><link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css'>
 <div class="container-fluid bg-white white" style="background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(imgs/bg2.jpg);background-size: cover; background-attachment: fixed !important;">
   <div class="row pb-5">
-    <div class="col-lg-7 text-center text-white">
+    <div class="col-lg-7 pt-5 text-center text-white">
+      
+<style>
+html {
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+figure,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Core: Base
+ * --------------------------------------------------
+ */
+body {
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 2vw;
+  position: relative;
+  background: transparent;
+  background-size: cover;
+  font-size: 14px;
+  line-height: 20px;
+  color: #434A54;
+  text-rendering: optimizeSpeed;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+
+/**
+ * Component: `browser`
+ * -----------------------------------------------------------------------------
+ */
+.c-browser {
+  position: relative;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(imgs/bg2.jpg) !important;
+}
+
+/**
+ * Component: `bar`
+ * -----------------------------------------------------------------------------
+ */
+.c-bar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  height: 8% !important;
+}
+.c-bar--top {
+  background-color: #25A187;
+  z-index: 1;
+}
+.c-bar--bottom {
+  background-color: #F5F7FA;
+  border-bottom: 1px solid #E6E9ED;
+  z-index: 2;
+}
+
+/**
+ * Component: `controls`
+ * -----------------------------------------------------------------------------
+ */
+.c-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/**
+ * Component: `control`
+ * -----------------------------------------------------------------------------
+ */
+.c-control {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font: 0/0 '';
+  color: transparent;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.c-control--close {
+  border-color: #DA4453;
+  background-color: #ED5565;
+}
+.c-control--close:hover {
+  background-color: #DA4453;
+}
+.c-control--min {
+  border-color: #F6BB42;
+  background-color: #FFCE54;
+}
+.c-control--min:hover {
+  background-color: #F6BB42;
+}
+.c-control--max {
+  border-color: #8CC152;
+  background-color: #A0D468;
+}
+.c-control--max:hover {
+  background-color: #8CC152;
+}
+
+/**
+ * Component: `tabs`
+ * -----------------------------------------------------------------------------
+ */
+.c-tabs {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 5px;
+  padding: 0;
+  list-style: none;
+}
+
+/**
+ * Component: `tab`
+ * -----------------------------------------------------------------------------
+ */
+.c-tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(imgs/bg2.jpg);background-size: 110em;
+  height: 25px;
+  padding: 0 5px;
+  border-radius: 3px 3px 0 0;
+  color: #fff;
+  max-width: 10vw;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.c-tab:not(:last-child) {
+  margin-right: 5px;
+}
+.c-tab:hover:not(.is-active) {
+  background-color: #E6E9ED;
+}
+.c-tab.is-active {
+  background-color: #F5F7FA;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.c-tab__favicon {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.c-tab__title {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  font-size: 12px;
+  padding-right: 8px !important;
+  margin-left: 5px;
+  color: #fff;
+}
+
+/**
+ * Component: `mode`
+ * -----------------------------------------------------------------------------
+ */
+.c-mode {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  color: #AAB2BD;
+  border: 1px solid #AAB2BD;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.c-mode:hover {
+  color: #CCD1D9;
+  border-color: #CCD1D9;
+}
+.c-mode .fa {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+/**
+ * Component: `menu`
+ * -----------------------------------------------------------------------------
+ */
+.c-menu {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  color: #656D78;
+  border: 1px solid transparent;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.c-menu:hover {
+  background-color: #fff;
+  border-color: #CCD1D9;
+}
+.c-menu .fa {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+/**
+ * Component: `navigation`
+ * -----------------------------------------------------------------------------
+ */
+.c-navigation {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  color: #656D78;
+  border: 1px solid transparent;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.c-navigation:hover {
+  background-color: #fff;
+  border-color: #CCD1D9;
+}
+.c-navigation .fa {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+/**
+ * Component: `address`
+ * -----------------------------------------------------------------------------
+ */
+.c-address {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 0 5px;
+  margin: 0 5px;
+  border: 1px solid #CCD1D9;
+}
+.c-address__connection {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #A0D468;
+}
+.c-address__url {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  color: #656D78;
+}
+.c-address__bookmark {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #656D78;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.c-address__bookmark:hover {
+  color: #F6BB42;
+}
+
+/**
+ * Component: `frames`
+ * -----------------------------------------------------------------------------
+ */
+.c-frames {
+  position: relative;
+  height: 80vh;
+  background-color: #fff;
+}
+
+/**
+ * Component: `frame`
+ * -----------------------------------------------------------------------------
+ */
+.c-frame {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(imgs/bg2.jpg);background-size: 110em;
+  border: 0;
+}
+.c-frame--default {
+  background: transparent;
+  background-size: cover;
+}
+.c-frame--default:before {
+  content: "Welcome!";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 72px;
+  line-height: 72px;
+  font-weight: 100;
+}
+.c-frame.is-active {
+  display: block;
+}
+
+#style-1::-webkit-scrollbar
+{
+  width: 12px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+</style></head><body>
+
+<section class="c-browser" id="style-1">
+  <div class="c-bar c-bar--top justify-content-end my-auto d-flex center">
+    <ul class="tabs tabs-transparent">
+      <li class="tab left">
+          <img class="nav-link nav-img-mobile" src="imgs/Sparkel-logo.png" width="200px" height="70px" style="margin-top: -10px !important;">
+      </li>
+      <li class="tab login-mobile right text-white row" style="font-size: 20px;">
+        <?php 
+              if (isset($_COOKIE['ss'])) {
+              echo "<strong class='mt-3 mr-2'>Logged in as: "  .$_COOKIE['ss'] ." <i class='fa fa-user'></i></strong>";
+              }else{
+                echo "<strong class='mt-3 mr-2'>Logged in as: Guest <i class='fa fa-user-o'></i> </strong>";
+              }
+        ?>
+      </li>
+    </ul>
+  </div>
+  <div class="c-frames" style="background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)"  id="style-1" src="login/index.php" >
+    <iframe class="" src="<?php if(isset($_COOKIE['ss'])){ echo 'login/profile.php'; }else{ echo 'login/index.php'; } ?>" style="border: none; width: 100%;height: 100%; background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(imgs/bg2.jpg);background-size: 110em; zoom: 50% !important;"></iframe>
+  </div>
+</section>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/lazysizes/1.3.1/lazysizes.min.js'></script>
+<script >;(function() {
+
+  'use strict';
+
+  var $url = $('.js-url');
+  var $tab = $('.js-tab');
+  var $frame = $('.js-frame');
+
+  $url.on('click', function() {
+    $(this).select();
+  });
+
+  $url.on('keydown', function(event) {
+
+    if (event.keyCode !== 13) return;
+
+    var $currentTab = $tab.filter(function() {
+      return $(this).hasClass('is-active');
+    });
+
+    var $currentFrame = $frame.filter(function() {
+      return $(this).hasClass('is-active');
+    });
+    
+    var id = $currentFrame.data('frame');
+    
+    if (id === 0) { 
+      $currentFrame.replaceWith('<iframe class="c-frame js-frame is-active" data-frame="0" src="https://www.youtube.com"></iframe>');
+    } else {
+      $currentFrame.attr('src', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1');
+    }
+
+    $url.val('https://www.youtube.com/embed/dQw4w9WgXcQ');
+
+    $currentTab.find('.c-tab__title').text('Rick Astley - Never Gonna Give You Up');
+    $currentTab.find('.c-tab__favicon .fa').removeClass('fa-codepen').addClass('fa-youtube-play');
+  });
+
+  $(document).on('click', '.js-tab', function() {
+
+    var id = $(this).data('frame');
+
+    var $currentTab = $tab.filter(function() {
+      return $(this).data('frame') === id;
+    });
+
+    var $currentFrame = $frame.filter(function() {
+      return $(this).data('frame') === id;
+    });
+
+    var url = $currentFrame.attr('data-src');
+
+    $url.val(url);
+
+    $tab.removeClass('is-active');
+    $frame.removeClass('is-active');
+
+    $currentTab.addClass('is-active');
+    $currentFrame.addClass('is-active');
+  });
+
+})();
+
+//# sourceURL=pen.js
+</script>
       <!-- <div id="demo-page container-fluid">
     <div id="main-container">
     <!-- <div id="main-container" class="vertical-version">

@@ -1,17 +1,3 @@
- <?php
- if (isset($_POST["emulsion-interior"])) {
-    // echo "<script>alert('Welcome')</script>";
-    echo "<script>document.location = 'emulsion-interior.php'</script>";
- }
-  if (isset($_POST["emulsion-exterior"])) {
-    // echo "<script>alert('Welcome')</script>";
-    echo "<script>document.location = 'emulsion-exterior.php'</script>";
- }
- ?>
-
-
-
-
  <?php include 'header.php'; ?>
 <div id="emulsion" class="green-body" style="border-style: none !important;padding-top: 0.8em !important;">
   <div class=" container-fluid green-body" style="margin:0 auto; float: none;">
@@ -23,9 +9,6 @@
           </div>
           <div class="card-body">
           <h4 class="text-center green-font container-fluid mt-5 mb-0">Emulsion-interior</h4>
-          <hr class="container-fluid" />
-          <i class="text-muted justify-content-center my-auto d-flex container">Price: <s class="text-danger">N5,000</s></i>
-          <p class="text-center green-font container">Our price: N4,200</p>
           </div>
           <div class="card-foot p-4">
 
@@ -67,9 +50,10 @@
             <input type="text" placeholder="Search item..." name="search_eml_int" value="" class="text-center validate form-control" style="font-size: 20px !important;width: 70% !important;margin: 0 auto !important;border-bottom: 5px solid #25A187 !important;">
           <?php echo $output; ?>
             </form>
-          <form action="index.php#test3" method="POST" class="form-group white p-2" style="border-style: none;">
+            <a href="emulsion-interior.php" target="_blank" class="btn green-body justify-content-center my-auto d-flex container-fluid" style="height: 60px;padding-top: 15px;">Go to store <i class="fa fa-shopping-cart"></i></a>
+            <!-- <form action="index.php#test3" method="POST" class="form-group white p-2" style="border-style: none;">
               <button type="submit" name="emulsion-interior" class="btn green-body justify-content-center my-auto d-flex container-fluid" style="height: 60px; font-size: 17px;">Go to store <i class="fa fa-shopping-cart"></i></button>
-              </form>
+            </form> -->
           </div>
         </div>
       </div>
@@ -82,9 +66,6 @@
           </div>
           <div class="card-body">
           <h4 class="text-center green-font container-fluid mt-5 mb-0">Emulsion-exterior</h4>
-          <hr class="container-fluid" />
-          <i class="text-muted justify-content-center my-auto d-flex container">Price: <s class="text-danger">N8,999</s></i>
-          <p class="text-center green-font container">Our price: N8,500</p>
           </div>
           <div class="card-foot p-4">
 
@@ -126,9 +107,10 @@
             <input type="text" placeholder="Search item..." name="search_eml_ext" value="" class="mb-0 text-center validate form-control" style="font-size: 20px !important;width: 70% !important;margin: 0 auto !important;border-bottom: 5px solid #25A187 !important;">
           <?php echo $output; ?>
             </form>
-          <form action="index.php#test3" method="POST" class="form-group white p-2" style="border-style: none;">
+            <a href="emulsion-exterior.php" target="_blank" class="btn green-body justify-content-center my-auto d-flex container-fluid" style="height: 60px;padding-top: 15px;">Go to store <i class="fa fa-shopping-cart"></i></a>
+            <!-- <form action="index.php#test3" method="POST" class="form-group white p-2" style="border-style: none;">
               <button type="submit" name="emulsion-exterior" class="btn green-body justify-content-center my-auto d-flex container-fluid" style="height: 60px; font-size: 17px;">Go to store <i class="fa fa-shopping-cart"></i></button>
-              </form>
+            </form> -->
           </div>
         </div>
       </div>

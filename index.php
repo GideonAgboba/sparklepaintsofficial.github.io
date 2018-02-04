@@ -1,3 +1,4 @@
+
 <! DOCTYPE html>
 <html>
 <head>
@@ -99,11 +100,22 @@
 
 
 
-
-
-
   <div id="test4" class="green-body" style="height: 100vh;">
-    <?php include 'order.php'; ?>
+    <?php
+    $mysqli = mysqli_connect("localhost", "root", "", "accounts");
+    $username = $_COOKIE['ss'];
+    $result = $mysqli->query("SELECT * FROM users WHERE last_name='$username'");
+     if ($result->num_rows !== 0) {
+       include 'order.php';
+     }else{
+      echo "
+            <div class='row justify-content-center my-auto d-flex bg-danger container-fluid p-2'>
+              <h6 class='text-center text-white'>PLEASE LOGIN TO VIEW CART <i class='fa fa-shopping-cart'></i></h6>
+              <button style='border: 0;' class='btn-sm ml-3 p-2 bg-primary text-white'>Refresh cart <i class='fa fa-refresh'></i></button>
+            </div>
+            ";
+     }
+     ?>
   </div>
 
 
