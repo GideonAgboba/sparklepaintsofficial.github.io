@@ -88,7 +88,7 @@ CREATE TABLE `$table_name` (
 </script>
       <nav class="navbar-expand white fixed-top">
       	<button class="btn green-body ml-3 mt-2" onclick="close_window()">CLOSE</button>
-      	<form class="center brand-logo" method="POST" action="emulsion-interior.php">
+      	<form style="width: 400px;" class="center brand-logo" method="POST" action="emulsion-interior.php">
       	<input type="text" name="search" class="form-control validate text-center" placeholder="search item" value="<?php if(isset($_POST['search'])){ echo $_POST['search'];} ?>">
       	</form>
       	<a href="index.php#test4" class="btn green-body right mt-2 mr-3 ">View cart</a>

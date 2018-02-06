@@ -1,5 +1,5 @@
-<?php
-/* Databasr connection settions for login */
+	<?php
+/* Database connection settings */
 $host = 'localhost';
 $user = 'root';
 $pass = '';

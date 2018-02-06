@@ -1,65 +1,65 @@
 <?php
-  require 'db.php';
-  session_start();
+/* User login process, checks if user exists and password is correct */
 
-?>
-<! DOCTYPE html>
-<html>
-<head>
-<?php
-  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['login'])) {
-      # user logging in 
-      require 'log.php';
-    }elseif (isset($_POST['register'])) {
-      # user registering
-      require 'register.php';
+// Escape email to protect against SQL injections
+$email = $mysqli->escape_string($_POST['email']);
+$result = $mysqli->query("SELECT * FROM users WHERE email='$email'");
+
+if ( $result->num_rows == 0 ){ // User doesn't exist
+    $_SESSION['message'] = "User with that email doesn't exist!";
+    header("location: error.php");
+}
+else { // User exists
+    $user = $result->fetch_assoc();
+
+    if ( password_verify($_POST['password'], $user['password']) ) {
+        $_SESSION['email'] = $user['email'];
+        $_SESSION['first_name'] = $user['first_name'];
+        $_SESSION['last_name'] = $user['last_name'];
+        $_SESSION['phone'] = $user['phone'];
+        $_SESSION['active'] = $user['active'];
+        
+
+$username = $user['last_name'];
+$connect = mysqli_connect("localhost", "root", "", "products");
+$create= "
+        CREATE TABLE `$username` (
+          `id` int(11) NOT NULL,
+          `title` varchar(255) NOT NULL,
+          `price` varchar(255) NOT NULL,
+          `description` text NOT NULL,
+          `image` varchar(255) NOT NULL,
+          `quantity` varchar(255) NOT NULL
+        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+        ";
+mysqli_query($connect, $create); 
+        
+        /* get users firstname */
+        // $res = $mysqli->query("SELECT * FROM users WHERE email='$email'");
+        // while ($row = fetch($res)) {
+        //     $ss = $row['first_name '];
+        //  }
+
+            // $connect = mysqli_connect("localhost", "root", "", "accounts");
+            // $query = "SELECT * FROM users WHERE email='$email'";
+            // $result = mysqli_query($connect, $query);
+            // if (mysqli_num_rows($result) >0) {
+            //     while ( $row = mysqli_fetch_array($result)) {
+            //         $ss = $row['first_name'];
+            //     }
+        $ss = $user['last_name'];
+        // $ss = md5( rand(0,1000));
+        $us = $_POST['email'];
+        $_COOKIE['ss'] = setcookie("ss", $ss, time() + 60 * 60 * 60 * 365, '', '', false, true );
+        $_COOKIE['us'] = setcookie("us", $us, time() + 60 * 60 * 60 * 365, '', '', false, true );
+        // This is how we'll know the user is logged in
+        $_SESSION['logged_in'] = true;
+
+        header("location: index.php");
     }
-  }
+    else {
+        $_SESSION['message'] = "You have entered wrong password, try again!";
+        header("location: error.php");
+    }
+}
 
-?>
-
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <title>Sparkle | Login</title>
-    <link href="sparkle-min.css" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/materialize.min.css"> -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/carousel.css">
-
-    <link rel="icon" href="imgs/icon.png">
-</head>
-<body class="text-white" style="background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(imgs/bg2.jpg) !important;background-size: cover !important;">
-
-  <div class="container p-4" style="position: absolute;top: 50%;left: 50%; transform: translate(-50%,-50%);border-radius: 10px;">
-    <form class="container-fluid" method="POST" action="login.php">
-      <h1 class="text-white text-center">LOGIN <i class="fa fa-sign-in"></i></h1>
-      <hr class=" text-white bg-white">
-      <input type="text" name="username" placeholder="Username" class="p-4 mb-2 text-center validate form-control" required />
-      <input type="password" name="password" placeholder="Password" class="p-4 mb-2 text-center validate form-control" required />
-      <button type="submit" class="btn text-muted bg-white container-fluid p-4 mb-2" name="login" style="font-size: 20px;">Proceed to login</button>
-      <a href="register.php" class="text-center text-white btn bg-danger container-fluid p-4 mb-2">Dont have an account? click to Register</a>
-      <a href="" class="btn btn-warning container-fluid p-4 mb-2 text-white">Forgot password? click to reset</a>
-      <a href="#" class="text-white text-center justify-content-center my-auto d-flex">Like our facebook page Sparklepaints@2018</a>
-    </form>
-  </div>
-
-  
-
- <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js?ver=1.11.2'></script>
-    <script src="jquery/jquery.min.js"></script>
-    <script src="popper/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/interaction.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/spin.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/ladda.min.js'></script>
-<script  src="js/index.js"></script>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript" src="js/init.js"></script>
-</body>
-</html>

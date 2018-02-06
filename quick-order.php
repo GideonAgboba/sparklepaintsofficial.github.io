@@ -5,7 +5,7 @@
 		<div class="container-fluid">
 			<div class="modal-header">
 				<button class="close" type="button" data-dismiss="modal" aria-label="close">
-				<span aria-hidden="true" class=" modal-dialog">&times;</span>
+				<span aria-hidden="true" class=" modal-dialog"><i class="fa fa-close" style="background-color: #fff;"></i></span>
 				</button>
 				<h4 class="modal-title text-center"><i class="fa fa-handshake-o"></i> Make purchase:</h4>
 			</div>
@@ -13,7 +13,7 @@
 				<section class=" mt-4">
       			<div class="row">
 
-      			 <form class="container-fluid" id="contact-form" method="POST" action="https://formspree.io/agbobakehinde@gmail.com"> 
+      			 <form class="container-fluid" id="contact-form" method="POST" action="https://formspree.io/kunsoldopa126@gmail.com"> 
 
 
 		            <div class="row"> 
@@ -45,7 +45,7 @@
 		               </div>  
 		               <div class="input-field col-lg-6">
 		                  <input placeholder="Item" id="item" type="text" class="validate text-center text-white" name="item"> 
-		                  <label for="item" class="text-white">Item:</label> 
+		                  <label for="item" class="text-white">Item description:</label> 
 		               </div> 
 		            </div> 
 		            <div class="row green-body mt-2 mb-2" style="border-radius: 5px;padding: 5px;">
@@ -53,7 +53,7 @@
 		            		<hr class="container">	
 		               <div class="input-field col-lg-12"> 
 		                  <input placeholder="Items" id="items" type="text" class="validate text-center text-white" name="item"> 
-		                  <label for="items" class="text-white">Items and quantity:</label> 
+		                  <label for="items" class="text-white">Items descriptions:</label> 
 		               </div>
 		           </div>
 		            <div class="row"> 
@@ -97,7 +97,7 @@
 			alertify.error("Please check your entries "); 
 		}else{
 			$.ajax({
-				url: "https://formspree.io/agbobakehinde@gmail.com",
+				url: "https://formspree.io/kunsoldopa126@gmail.com",
 				method: "POST",
 				data: $(this).serialize(),
 				dataType: "json"

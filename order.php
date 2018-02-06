@@ -11,7 +11,7 @@
 					<button onclick="refresh()" class="btn bg-primary text-white">REFRESH <i class="fa fa-refresh"></i></button>
 					<button type="submit" class="btn bg-danger text-white" name="del_all">DELETE ALL <i class="fa fa-trash"></i></button>
 					<!-- <button class="btn green-body text-white" data-toggle="modal" data-target="#details-7">CHECKOUT <i class="fa fa-shopping-cart"></i></button> -->
-					<a href="quick-order.html" class="btn green-body text-white"  data-toggle="modal" data-target="#details-7" onclick="">CHECKOUT <i class="fa fa-shopping-cart"></i></a>
+					<a href="quick-order.html" class="btn green-body text-white"  data-toggle="modal" data-target="#details-7" onclick=">">CHECKOUT <i class="fa fa-shopping-cart"></i></a>
 				</form>
 			</section>
 			<?php include 'pop.php'; ?>
@@ -21,6 +21,8 @@
 
 
 		<?php
+		
+			$total = 0;
 			$mysqli = new mysqli("localhost", "root", "", "products");
 			if ($mysqli->connect_errno) {
 				// echo "<script>alert('')</script>";
@@ -33,7 +35,6 @@
 			}
 			$query = $mysqli->query("SELECT id,title,price,description,image,quantity FROM $teble_name ");
 			while ($row = $query->fetch_assoc()){
-			$total= $total;
 		?>
 
 				<form method="post" class="col-lg-3" action="index.php?idd=<?php echo $row['id'] ?>">
@@ -53,7 +54,7 @@
 
 			
 		<?php
-			$total = $total + ($row["quantity"] * $row["price"]);
+			$total =  $total + ($row["quantity"] * $row["price"]);
 		}
 		if (isset($_POST['del'])) {
 			echo "<script>confirm('Are you sure you want to delete item?')</script>";
@@ -119,7 +120,8 @@
 				<div class="row">
 				<h6 href="#" class="text-muted">
 					<?php
-						echo "Total: N" .number_format($total,2);
+						echo "Total: N" .number_format($total,0);
+						
 					?>
 				</h6>	
 				</div>

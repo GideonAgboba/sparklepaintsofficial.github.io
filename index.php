@@ -19,15 +19,191 @@
 </head>
 <body class="green-body text-white">
 
+<?php
+  include 'nav.php';
+?>
 
   <div id="test1" class=" bg-white white green-font ">
-      <?php include 'home-first-section.php'; ?>
-      <?php include 'quick-order.php'; ?>
+    <?php include 'home-first-section.php'; ?>
 
-      
-      <?php include 'home-third-section.php'; ?>
+        <?php include 'home-second-section.php'; ?>
+        <?php include 'home-third-section.php'; ?>
+        <?php include 'home-fourth-section.php'; ?>
+    <!--Content-->
+    <div class="container-fluid green-body">
 
-      <?php include 'home-fourth-section.php'; ?>
+
+        <!-- Section: About -->
+        <section class="section container about mb-5  green-font green-font white" id="about">
+
+            <!-- Secion heading -->
+            <h3 class="text-center font-bold mt-5 pt-2 mb-3 dark-grey-text wow fadeIn">
+                <em>About us</em>
+            </h3>
+
+            <!-- Section description -->
+            <p class="text-center font-up font-bold green-font mb-1 pb-4 wow fadeIn">Tourism students with love to travel</p>
+
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Column column -->
+                <div class="col-md-5 mr-auto mb-5 col-lg-6 wow fadeIn" data-wow-delay="0.4s">
+
+                    <!-- Image -->
+                    <!-- <img src="imgs/all.jpg" style="height: 100%; width: 100%;" class="img-responsive"
+                        alt="My photo"> -->
+
+                       <?php include 'slide-about.php'; ?>
+                </div>
+                <!-- Column column -->
+
+                <!-- Grid column column -->
+                <div class="col-md-6 col-lg-6 wow fadeIn" data-wow-delay="0.4s">
+
+                    <!-- Description -->
+                    <p align="justify">
+                      <h5 class="justify">VISION <i class="fa fa-angle-double-down"></i></h5> <i class="">To be a leading paint manufacturer and paint of first choice.</i>
+                    </p>
+
+                    <p align="justify">
+                      <h5>MISSION STATEMENT <i class="fa fa-angle-double-down"></i></h5>   Our culture is to make top quality paints that stands you out among the rest. To achieve this, we have up to date technology at our disposal to offer best quality paint at affordable prices.
+                    </p>
+
+                    <p align="justify">
+                      <h5>OUR PRODUCTS <i class="fa fa-angle-double-down"></i></h5> 
+                        <ul style="font-size: 18px; font-family: sans-serif;font-weight: lighter;">
+                          <li>
+                            DECORATIVE PAINTS: Sparkle decorative range includes: SPARKFLEX, TEXCOTE FINISH, EMULSION AND GLOSS FINISHED. The paints have excellent drying properties, high obliterating power, good colour retention and good adhesion.
+                          </li>
+                          <hr class="green-font bg-white">
+                          <li>
+                            MARINE AND PROTECTIVE COATINGS; Sparkle paints has specially formulated marine coatings which protects vessels that sail both tropical waters and temperature waters of different salinity. This includes: EPOXY COATINGS, POLYURETHANE COATINGS, CHLORINATED RUBBER PAINTS, e.t.c
+                          </li>
+                            <a href="#" class='btn green-body'>See more <i class="fa fa-angle-double-right"></i></a>
+                          <!-- 
+                          <hr class="green-font bg-white">
+                          <li>
+                            INDUSTRIAL COATINGS : In order to prevent industrial machines from the effects of heat and rust, sparkle paints has carefully formulated industrial coatings to take care of industrial needs, these includes: NITROCELLULOSE FAST DRY PAINTS, OVEN BAKE OR STOVING PAINTS, POLYURETHANE COATINGS, etc. These paints are made with quality binders like Acrylic,Alkyd, Polyester and light stable pigments.
+                          </li>
+                          <hr class="green-font bg-white">
+                          <li>
+                            AUTOMOTIVE PAINTS : Sparkle paints has specially formulated AUTO FINISH which gives good gloss, hardness and super coverage at just one coating. This includes: AUTOERYL, AUTOBASE AND ORDINARY FLEX AUTO REFINISHES. 
+                          </li>
+                          <hr class="green-font bg-white">
+                          <li>
+                            WOOD FINISHES: Sparkle paints has specially formulated  WOOD FINISH which provide long lasting protection, enhance the beauty of natural wood .This includes: SANDING SEALER, GLOSSY LAQUER, MATT LACQUER AND STAINS.
+                          </li> -->
+                        </ul>
+                    </p>
+
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </section>
+        <!-- Section: About -->
+    </div>
+    <!--/.Content-->
+
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+    <!-- Bootstrap dropdown -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+    <!--Footer-->
+    <footer class="green-font center-on-small-only   white ">
+
+        <!--Footer Links-->
+        <div class="container">
+            <div class="row">
+
+                <!--First column-->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="title font-bold mt-3 mb-4">ABOUT SPARKLE PAINTS</h5>
+
+                    <p>Material Design for Bootstrap (MDB) is a powerful Material Design UI KIT for most popular HTML, CSS,
+                        and JS framework - Bootstrap.</p>
+                </div>
+                <!--/.First column-->
+
+                <hr class="w-100 clearfix d-sm-none">
+
+                <!--Second column-->
+                <div class="col-lg-2 col-md-6 ml-auto">
+                    <h5 class="title font-bold mt-3 mb-4">Recent Trips</h5>
+                    <ul>
+                        <li>
+                            <a href="#!">Balkans</a>
+                        </li>
+                        <li>
+                            <a href="#!">Tatra Mountains</a>
+                        </li>
+                        <li>
+                            <a href="#!">Norway Fjords</a>
+                        </li>
+                        <li>
+                            <a href="#!">Baikal Lake</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.Second column-->
+
+                <hr class="w-100 clearfix d-sm-none">
+
+                <!--Third column-->
+                <!--/.Third column-->
+
+                <hr class="w-100 clearfix d-sm-none">
+
+                <!--Fourth column-->
+                <div class="col-lg-2 col-md-6 ml-auto ">
+                    <h5 class="title font-bold mt-3 mb-4">Follow me on</h5>
+                    <ul>
+                        <li>
+                            <a href="#!"><i class="fa fa-facebook"></i> Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#!"><i class="fa fa-instagram"></i> Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#!"><i class="fa fa-twitter"></i> Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#!"><i class="fa fa-google"></i>Gmail</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--/.Fourth column-->
+
+                <hr class="w-100 clearfix d-sm-none">
+
+
+            </div>
+        </div>
+        <!--/.Footer Links-->
+
+    </footer>
+    <!--/.Footer-->
   </div>
 
 
@@ -47,19 +223,11 @@
 
 
 
-  <div id="test3" class="green-body container-fluid p-4" style="zoom: 80% !important;">
+  <div id="test3" class="green-body container-fluid " style="zoom: 80% !important;">
     <?php include 'storenav.php'; ?>
     <?php include 'storenav-texcote.php'; ?>
     <?php include 'storenav-gloss.php'; ?>
   </div>
-
-
-
-
-
-
-
-
 
 
 
@@ -105,13 +273,12 @@
     $mysqli = mysqli_connect("localhost", "root", "", "accounts");
     $username = $_COOKIE['ss'];
     $result = $mysqli->query("SELECT * FROM users WHERE last_name='$username'");
-     if ($result->num_rows !== 0) {
+     if (isset($_COOKIE['ss'])) {
        include 'order.php';
      }else{
       echo "
             <div class='row justify-content-center my-auto d-flex bg-danger container-fluid p-2'>
               <h6 class='text-center text-white'>PLEASE LOGIN TO VIEW CART <i class='fa fa-shopping-cart'></i></h6>
-              <button style='border: 0;' class='btn-sm ml-3 p-2 bg-primary text-white'>Refresh cart <i class='fa fa-refresh'></i></button>
             </div>
             ";
      }
@@ -128,9 +295,6 @@
 
 
 
-<?php
-  include 'nav.php';
-?>
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js?ver=1.11.2'></script>
     <script src="jquery/jquery.min.js"></script>
     <script src="popper/popper.min.js"></script>
