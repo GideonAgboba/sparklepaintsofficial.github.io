@@ -17,7 +17,7 @@
                   <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">Click Order to make quick purchase: <i class="fa fa-angle-up right text-muted"></i></span>
                     <p class="green-font text-center">This section is for users who want to make payments on delivery...</p>
-                    <a href="quick-order.html" class="mt-2 container-fluid btn green-body white-text"  data-toggle="modal" data-target="#details-6" onclick="">Order</a>
+                    <a href="quick-order.php" class="mt-2 container-fluid btn green-body white-text"  data-toggle="modal" data-target="#details-6" onclick="">Order</a>
                   </div>
                   <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">Quick purchase:<i class="fa fa-close right text-muted"></i></span>
