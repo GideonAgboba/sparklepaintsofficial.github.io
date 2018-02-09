@@ -208,18 +208,11 @@
 
 
 
-
-
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js?ver=1.11.2'></script>
     <script src="jquery/jquery.min.js"></script>
     <script src="popper/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/interaction.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/spin.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/ladda.min.js'></script>
 <script  src="js/index.js"></script>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/init.js"></script>
 </body>
