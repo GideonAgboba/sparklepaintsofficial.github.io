@@ -9,9 +9,9 @@
 
 
  <?php include 'header.php'; ?>
-<div id="gloss" class="green-body" style="border-style: none !important;padding-top: 0.8em !important;">
-  <div class=" container-fluid green-body" style="margin:0 auto; float: none;">
-    <div class="row green-body">
+<div id="gloss" class="green-body mt-5" style="border-style: none !important;padding-top: 0.8em !important;">
+  <div class=" container-fluid green-body mt-5" style="margin:0 auto; float: none;">
+    <div class="row mt-5">
       <div class="col-lg-12 pt-2 green-font">
         <div class="card card-main container">
           <div class="card-img">

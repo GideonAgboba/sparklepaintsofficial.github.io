@@ -22,7 +22,7 @@
       if (mysqli_num_rows($result) >0) {
         while ( $row = mysqli_fetch_array($result)) {
     ?>
-            <div class="container col-lg-3">  
+            <div class="container mt-5 col-lg-3">  
                 <div class="container-fluid">
                   <div class="card">
                   <div class="card-image waves-effect waves-block waves-light">

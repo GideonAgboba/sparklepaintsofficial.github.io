@@ -1,4 +1,4 @@
-<div class="container-fluid bg-white white" style="background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(imgs/bg2.jpg);background-size: cover; background-attachment: fixed !important;">
+<div class="container-fluid bg-white white mt-5" style="background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(imgs/bg2.jpg);background-size: cover; background-attachment: fixed !important;">
   <div class="row pb-5">
     <div class="col-lg-7 pt-5 text-center text-white">
       <?php include 'slide-home.php'; ?>

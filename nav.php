@@ -18,7 +18,7 @@
         <li class="text-white tab login-desktop right row" style="font-size: 20px;">
         <?php 
               if (isset($_COOKIE['ss'])) {
-              echo "<strong class='mt-43 mr-2'>Logged in as:  <i class='fa fa-user'></i> "  .$_COOKIE['ss'] ." </strong><form method='POST' action='logout.php' class='form-group right mr-3 mt-1'><button type='submit' class='btn bg-danger mr-3' name='clear_cookie'>LogOut</button></form>";
+              echo "<strong class='mt-4 mr-2'>Logged in as:  <i class='fa fa-user'></i> "  .$_COOKIE['ss'] ." </strong><form method='POST' action='logout.php' class='form-group right mr-3 mt-1'><button type='submit' class='btn bg-danger mr-3' name='clear_cookie'>LogOut</button></form>";
               }else{
                 echo "<strong class='mt-3 mr-2'>Logged in as  </i> Guest <i class='fa fa-user-o'></i> </strong><form method='POST' action='index-login.php' class='form-group right mr-3 mt-1'><button class='btn bg-primary mr-3' name='clear_cookie'>LogIn</button></form>";
               }

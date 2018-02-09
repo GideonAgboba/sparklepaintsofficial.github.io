@@ -1,7 +1,7 @@
 <div id="texcote" class="green-body container-fluid">
-    <div class="row container-fluid">
+    <div class="row container-fluid mt-5">
     	<div class=" container-fluid green-body" style="margin:0 auto; float: none;">
-    <div class="row green-body">
+    <div class="row mt-5">
       <div class="col-lg-6 pt-2 green-font">
         <div class="card card-main container">
           <div class="card-img">
