@@ -26,17 +26,10 @@
 <script src="js/materialize.min.js"></script>
 <script src="js/init.js"></script>
 
-<script>
-  //paste this code under the head tag or in a separate js file.
-  // Wait for window load
-  $(window).load(function() {
-    // Animate loader off screen
-    $(".se-pre-con").fadeOut("slow");;
-  });
-</script>
+
 </head>
 <body class="green-body text-white">
-  <?php include 'pre.php'; ?>
+  <?php //include 'pre.php'; ?>
   
 
 <?php
