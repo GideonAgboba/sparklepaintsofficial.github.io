@@ -7,6 +7,8 @@ session_start();
 <html>
 <head>
   <title>Sign-Up/Login Form</title>
+  
+    <script src="js/index.js"></script>
 </head>
 
     <link rel="stylesheet" href="css/bootstrap.min.css"> 
@@ -122,10 +124,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         
       </div><!-- tab-content -->
       
-</div> <!-- /form -->
-  <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+</div>
 
-    <script src="js/index.js"></script>
     <script type="text/javascript">
       $('.form').find('input, textarea').on('keyup blur focus', function (e) {
   
