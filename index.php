@@ -18,6 +18,13 @@
     <link rel="icon" href="imgs/icon.png">
 <script src="js/loader.js"></script>
 <script src="js/loadermat.js"></script>
+<script src="jquery/jquery.min.js"></script>
+<script src="popper/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/interaction.js"></script>
+<script  src="js/index.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/init.js"></script>
 
 <script>
   //paste this code under the head tag or in a separate js file.
@@ -203,17 +210,5 @@
 
 
 
-
-
-
-
-
-    <script src="jquery/jquery.min.js"></script>
-    <script src="popper/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/interaction.js"></script>
-<script  src="js/index.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript" src="js/init.js"></script>
 </body>
 </html>
